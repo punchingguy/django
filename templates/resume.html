@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static './assets/css/index.css' %}" />
+    <script
+      
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container" style="display: revert;">
+        <h1>Profile Edit</h1>
+
+        
+        <form class="form" enctype="multipart/form-data" method="post">
+          {% csrf_token %}
+          <input type="file" name="file" placeholder="Resume" />
+          <!-- <input type="password" name="password" placeholder="Password" /> -->
+          <button type="submit" id="login-button">Submit</button><br>
+          <!--<button type="submit" id="login-button"><a href="{% url 'register' %}" style="text-decoration: none;color: #fd7f2c;">Register</a></button> -->
+        </form>
+      
+
+        <ul class="bg-bubbles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      <div class="container" style="margin: 0px;">
+      <!-- <div class="row">
+        <div class="col-sm"> -->
+        {% for message in messages %}
+        <h3>
+            {{message}}
+        </h3>
+        {% endfor %}
+    <!-- </div>
+    </div> -->
+    </div>
+  </div>
+  </body>
+</html>
